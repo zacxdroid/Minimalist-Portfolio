@@ -137,7 +137,7 @@ function App() {
               Ver Proyectos
             </a>
             
-            <a href="assets/cv.pdf" download="CV_IsaacRivas_BackendJr.pdf" className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3 rounded font-semibold transition-all duration-300 hover:border-accent">
+            <a href="/cv.pdf" download="CV_IsaacRivas_BackendJr.pdf" className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3 rounded font-semibold transition-all duration-300 hover:border-accent">
               <i className="fas fa-file-download text-accent"></i> Descargar CV
             </a>
 

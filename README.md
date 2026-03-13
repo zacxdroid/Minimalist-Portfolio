@@ -1,5 +1,5 @@
 # -->  Portafolio Personal
-[Visitar sitio en vivo](link-desactivado)
+[Visitar sitio en vivo](https://zacxdroid.github.io/Minimalist-Portfolio/)
 
 Repositorio de mi portafolio personal para mostrar mis habilidades en desarrollo como Backend Jr. Aún en proceso de agregar nuevos proyectos en él. 
 

@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react"
-import P1_Preview from "./assets/P1_Preview.png"
 
 function App() {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false)

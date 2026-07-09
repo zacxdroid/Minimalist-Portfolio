@@ -40,3 +40,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #38bdf8;
 }
+
+.follow {
+    background-color: red;
+}

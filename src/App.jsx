@@ -119,11 +119,11 @@ function App() {
       <header className="h-screen flex items-center justify-center relative overflow-hidden">
 
         {/* CANVAS SECTION */}
-        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full opacity-25"></canvas>
+        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full opacity-25 z-1"></canvas>
 
         {/* BACKGROUND DECORATIVE ELEMENTS */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl z-0"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl z-0"></div>
 
         <div className="text-center z-10 px-4 reveal">
           <h2 className="text-accent font-mono text-sm mb-4 tracking-widest">PORTAFOLIO TÉCNICO</h2>
@@ -140,7 +140,9 @@ function App() {
             <a href="cv.pdf" download="CV_IsaacRivas_BackendJr.pdf" target="_blank" rel="noopener" className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3 rounded font-semibold transition-all duration-300 hover:border-accent">
               <i className="fas fa-file-download text-accent"></i> Descargar CV
             </a>
-
+            <a href="https://www.linkedin.com/in/isaac-rivas-rosas-864750409/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-textMuted hover:text-white px-6 py-3 transition-colors">
+            <i className="fab fa-linkedin text-xl"></i> LinkedIn
+            </a>
             <a href="https://github.com/zacxdroid" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-textMuted hover:text-white px-6 py-3 transition-colors">
               <i className="fab fa-github text-xl"></i> GitHub
             </a>
@@ -156,10 +158,9 @@ function App() {
               <i className="fas fa-terminal text-accent text-xl"></i> Sobre mí
             </h2>
             <p className="text-lg leading-relaxed text-slate-300">
-              Estudiante de TI con fuerte interés en <span className="text-accent font-semibold">Backend Engineering</span> y <span className="text-accent font-semibold">Cybersecurity</span>. 
-              Actualmente desarrollando habilidades en Node.js, Python, Linux, SQL y Git. 
-              Me encuentro construyendo una base técnica sólida para integrarme a un entorno profesional 
-              donde pueda aprender, crecer y aportar valor. 
+              Estudiante de TI con fuerte interés en <span className="text-accent font-semibold">Backend Engineering</span>. 
+              Actualmente en desarrollo de habilidades en Node.js, Express, JavaScript y MySQL, así como React para la construcción de interfaces.
+              Me encuentro fortaleciendo una base técnica sólida para integrarme a un entorno profesional donde pueda seguir aprendiendo, crecer y aportar valor.
             </p>
           </div>
         </div>
@@ -168,8 +169,55 @@ function App() {
       {/* SKILLS SECTION */}
       <section id="skills" className="py-20 bg-slate-900/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <h2 className="text-3xl font-bold text-center mb-16 text-white reveal">Habilidades Técnicas</h2>
-    
+
+          {/* TECH STACK */}
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10 mb-16 reveal">
+            <img
+              src="/Minimalist-Portfolio/images/nodejs.png"
+              alt="Node.js"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+
+            <img
+              src="/Minimalist-Portfolio/images/html.png"
+              alt="HTML"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+
+            <img
+              src="/Minimalist-Portfolio/images/css.png"
+              alt="CSS"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+
+            <img
+              src="/Minimalist-Portfolio/images/react.png"
+              alt="React"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+
+            <img
+              src="/Minimalist-Portfolio/images/mysql.png"
+              alt="MySQL"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+
+            <img
+              src="/Minimalist-Portfolio/images/js.png"
+              alt="JavaScript"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+
+            <img
+              src="/Minimalist-Portfolio/images/py.png"
+              alt="Python"
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          {/* CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Skill Card: Backend */}
             <div className="bg-cardDark p-6 rounded-lg hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] transition-all duration-300 border border-slate-700 reveal">
@@ -250,6 +298,25 @@ function App() {
             </div>
 
           </div>
+
+          {/* LANG */}
+          <div className="mt-16 flex flex-col items-center reveal">
+            <h3 className="text-2xl font-bold text-white mb-6"> Idiomas: </h3>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="bg-cardDark border border-slate-700 rounded-lg px-5 py-3 flex items-center gap-3 hover:border-accent transition-colors duration-300">
+                <span className="font-semibold text-white">Español</span>
+                <span className="text-sm text-textMuted">(Nativo)</span>
+              </div>
+
+              <div className="bg-cardDark border border-slate-700 rounded-lg px-5 py-3 flex items-center gap-3 hover:border-accent transition-colors duration-300">
+                <span className="font-semibold text-white">Inglés</span>
+                <span className="text-sm text-textMuted">(B1-B2)</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -258,7 +325,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-12 reveal">
             <div className="h-px bg-slate-700 flex-grow"></div>
-            <h2 className="text-3xl font-bold text-center px-6 text-white">Portafolio Profesional</h2>
+            <h2 className="text-3xl font-bold text-center px-6 text-white">Proyectos</h2>
             <div className="h-px bg-slate-700 flex-grow"></div>
           </div>
 
@@ -285,9 +352,6 @@ function App() {
                   <a href="https://github.com/zacxdroid/GymAI-Planner-FullStack" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
                   Ver en GitHub <i className="fas fa-arrow-right ml-2"></i>
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
-                  Ver Live <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
                 </div>
               </div>
             </article>
@@ -309,9 +373,15 @@ function App() {
                   <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">PostgreSQL (Neon Serverless)</span>
                   <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">JWT</span>
                 </div>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
-                  Ver en GitHub <i className="fas fa-arrow-right ml-2"></i>
-                </a>
+                <div className="flex flex-wrap gap-5">
+                  <a href="https://github.com/zacxdroid/REST-API-MovieWatchlist" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
+                    Ver en GitHub <i className="fas fa-code-branch ml-2"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/posts/isaac-rivas-rosas-864750409_buscotrabajo-backend-nodejs-ugcPost-7473189881201012736-znQy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGg6PcwBfU94SsjP1MAZDeysugNUNxgLpCo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
+                    Ver vídeo <i className="fas fa-circle-play ml-2"></i>
+                  </a>
+                </div>
+                
               </div>
             </article>
           </div>
@@ -331,6 +401,9 @@ function App() {
             <a href="mailto:zacky.dackyrr@gmail.com" className="flex items-center justify-center gap-3 bg-accent text-bgDark hover:bg-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg shadow-accent/20">
               <i className="fas fa-envelope"></i> Enviar Email
             </a>
+            <a href="https://www.linkedin.com/in/isaac-rivas-rosas-864750409/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-cardDark border border-slate-600 text-white hover:border-accent hover:text-accent px-8 py-4 rounded-lg font-bold text-lg transition-all">
+              <i className="fab fa-linkedin"></i> LinkedIn
+            </a>
           </div>
         </div>
       </section>
@@ -343,6 +416,7 @@ function App() {
           </div>
           <div className="flex space-x-6">
             <a href="https://github.com/zacxdroid" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><i className="fab fa-github text-xl"></i></a>
+            <a href="https://www.linkedin.com/in/isaac-rivas-rosas-864750409/" className="text-slate-400 hover:text-white transition-colors"><i className="fab fa-linkedin text-xl"></i></a>
             <a href="mailto:zacky.dackyrr@gmail.com" className="text-slate-400 hover:text-white transition-colors"><i className="fas fa-envelope text-xl"></i></a>
           </div>
         </div>

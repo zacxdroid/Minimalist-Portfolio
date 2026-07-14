@@ -1,4 +1,6 @@
 import { useRef, useState, useEffect } from "react"
+import movieAppImg from "/movie-app.png";
+import watchlistImg from "/watchlist-api.png";
 
 function App() {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false)
@@ -333,24 +335,45 @@ function App() {
             {/* Project 1 */}
             <article className="group bg-cardDark border border-slate-700 rounded-xl overflow-hidden reveal">
               <div className="h-2 bg-gradient-to-r from-orange-500 to-yellow-400"></div>
+              {/* Video 1 */}
+              <div className="relative overflow-hidden h-56">
+                <a href="https://www.linkedin.com/posts/isaac-rivas-rosas-864750409_buscotrabajo-frontend-reactjs-ugcPost-7482831698918010880-WeoF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGg6PcwBfU94SsjP1MAZDeysugNUNxgLpCo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block overflow-hidden h-56">
+                  <img
+                    src={movieAppImg}
+                    alt="React Movie App"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <i className="fas fa-circle-play text-white text-6xl transition-all duration-300 group-hover:scale-125 group-hover:text-yellow-400"></i>
+                  </div>
+                  </a>
+              </div>
+
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">Gym AI Planner Full Stack</h3>
+                  <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">React Movie App</h3>
                   <i className="fas fa-code text-slate-500"></i>
                 </div>
                 <p className="text-textMuted mb-4">
-                  Aplicación web Full-Stack que genera programas de entrenamiento personalizados para gimnasio utilizando IA. 
+                  Aplicación desarrollada con React.js que consume la API pública de The Movie Database (TMDB) para explorar, buscar y consultar información detallada de películas.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">Node.js + Express</span>
+                  <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">React.js</span>
                   <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">Vite</span>
                   <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">Tailwind CSS</span>
-                  <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">React</span>
-                  <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">API REST</span>
+                  <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">React Router DOM</span>
+                  <span className="px-2 py-1 bg-slate-700 rounded text-xs text-white">React-use</span>
                 </div>
-                <div className="flex gap-20">
-                  <a href="https://github.com/zacxdroid/GymAI-Planner-FullStack" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
-                  Ver en GitHub <i className="fas fa-arrow-right ml-2"></i>
+                <div className="flex flex-wrap gap-5">
+                  <a href="https://github.com/zacxdroid/React-MoviesAPI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
+                  Ver en GitHub <i className="fas fa-code-branch ml-2"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/posts/isaac-rivas-rosas-864750409_buscotrabajo-frontend-reactjs-ugcPost-7482831698918010880-WeoF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGg6PcwBfU94SsjP1MAZDeysugNUNxgLpCo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-white font-semibold text-sm transition-colors">
+                    Ver vídeo <i className="fas fa-circle-play ml-2"></i>
                   </a>
                 </div>
               </div>
@@ -359,6 +382,23 @@ function App() {
             {/* Project 2 */}
             <article className="group bg-cardDark border border-slate-700 rounded-xl overflow-hidden reveal">
               <div className="h-2 bg-gradient-to-r from-green-500 to-emerald-400"></div>
+              {/* Video 2 */}
+              <div className="relative overflow-hidden h-56">
+                <a href="https://www.linkedin.com/posts/isaac-rivas-rosas-864750409_buscotrabajo-backend-nodejs-ugcPost-7473189881201012736-znQy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGg6PcwBfU94SsjP1MAZDeysugNUNxgLpCo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block overflow-hidden h-56">
+                  <img
+                    src={watchlistImg}
+                    alt="REST API Movie Watchlist"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <i className="fas fa-circle-play text-white text-6xl transition-all duration-300 group-hover:scale-125 group-hover:text-emerald-400"></i>
+                  </div>
+                  </a>
+              </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">REST API Movie Watchlist</h3>
